@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Form in HTML</title>
+	<title>Validation</title>
 </head>
 <body>
 
