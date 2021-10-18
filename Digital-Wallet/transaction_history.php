@@ -1,8 +1,38 @@
-<!DOCTYPE html>
+<?php
+	if($_SERVER['REQUEST_METHOD'] === "POST")
+	{
+		$name = $_POST['name'];
+		$phone = $_POST['phone'];
+
+		if (empty($name))
+		{
+			echo "Please fill up the form properly";
+		}
+		else if(empty($phone))
+		{
+			echo "Please fill up the form properly";
+		}
+		else
+		{
+			$handle = fopen("users.json", "a");
+			$response = fwrite($handle, json_encode(array('name' => $name, 'phone' => $phone)). "\n");
+
+			if($response)
+			{
+				echo "Registration Successful!";
+			}
+			else
+			{
+				echo "Registration failed";
+			}
+		}
+	}
+?>
+
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Add Beneficiary</title>
+	<title>Transaction History</title>
 </head>
 <body>
 	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">

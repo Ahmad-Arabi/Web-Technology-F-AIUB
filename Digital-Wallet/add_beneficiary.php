@@ -75,9 +75,8 @@
 								echo "<td>".$arr1[$i]->phone."</td>";
 							echo "</tr>";
 				}
-
 						echo "</tbody>";
-				echo "</table>";
+						echo "</table>";
 			}
 			else
 			{
