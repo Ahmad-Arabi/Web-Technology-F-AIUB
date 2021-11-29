@@ -57,8 +57,8 @@
 
 		<label>Amount: </label>
 		<input type="number" name="amount">
-		<br><br>
 		<p id="error3" style="color: red;"></p>
+		<br><br>
 
 		<input type="submit" value="Send" name="submit">
 		<br><br>

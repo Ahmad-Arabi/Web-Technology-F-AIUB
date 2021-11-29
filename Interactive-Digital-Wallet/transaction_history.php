@@ -71,7 +71,6 @@
 			}
 
 			$sql = "SELECT * FROM thistory WHERE transfer_on between ? and ?";
-			$sql2 = "SELECT COUNT(*) FROM thistory";
 
 			$stmt = $conn->prepare($sql);
 			$stmt->bind_param("ss", $fromdate, $todate);
